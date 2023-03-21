@@ -19,3 +19,17 @@ jobs:
         env:
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}
+
+
+# reusable workflow version
+
+# name: reusable
+# on: [push]
+# jobs:
+#   tests:
+#     # use the reusable workflow to check out the code, install dependencies
+#     # and run the Cypress tests
+#     # https://github.com/bahmutov/cypress-workflows
+#     uses: bahmutov/cypress-workflows/.github/workflows/split.yml@v1
+#     with:
+#       n: 3
